@@ -1,3 +1,10 @@
+// DO NOT REMOVE 
+// NE PAS SUPPRIMER
+// This code is made by @0xKahli in github please give credit at the end and your are free to edit and distribute it however you want . Keep coding.
+// BUGS :
+// Car avoidance mode
+// IR remote controll
+// IR line tracker
 #include "IR_remote.h"
 #include "keymap.h"
 
@@ -19,7 +26,7 @@ volatile int Right_Distance;
 volatile char IR_Car_Mode;
 volatile boolean IR_Mode_Flag;
 Servo servo_A2;
-
+// DOES NOT WORK
 void Infrared_Tracing() {
   Left_Tra_Value = digitalRead(9);
   Center_Tra_Value = digitalRead(10);
@@ -95,7 +102,7 @@ float checkdistance() {
   delay(10);
   return distance;
 }
-
+// DOES NOT WORK
 void Ultrasonic_Avoidance() {
   Front_Distance = checkdistance();
   if (0 < Front_Distance && Front_Distance <= 20) {
@@ -124,7 +131,7 @@ void Ultrasonic_Avoidance() {
     Move_Forward(150);
   }
 }
-
+//DOSE NOT WORK
 void IR_remote_control() {
   switch (IR_Car_Mode) {
     case 'FF4AB5':
